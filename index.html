@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <!-- Link to Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <style>
+        /* Optional: Add custom styles here */
+    </style>
+</head>
+<body class="bg-gray-200 p-8">
+
+<div class="max-w-md mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+    <div class="p-4">
+        <h1 class="text-2xl font-bold mb-4">Currency Converter</h1>
+        
+        <div class="flex mb-4">
+            <input type="number" id="amountInput" class="w-1/2 p-2 border border-gray-300 rounded-l focus:outline-none" placeholder="Enter amount">
+            <select id="fromCurrency" class="w-1/2 p-2 border border-gray-300 rounded-r focus:outline-none">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="JPY">JPY</option>
+                <option value="CAD">CAD</option>
+                <option value="AUD">AUD</option>
+                <option value="CHF">CHF</option>
+                <option value="CNY">CNY</option>
+            </select>
+        </div>
+        
+        <div class="flex mb-4">
+            <input type="text" id="convertedAmount" class="w-full p-2 border border-gray-300 rounded focus:outline-none" placeholder="Converted amount" readonly>
+        </div>
+        
+        <select id="toCurrency" class="w-full p-2 border border-gray-300 rounded mb-4 focus:outline-none">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="JPY">JPY</option>
+            <option value="CAD">CAD</option>
+            <option value="AUD">AUD</option>
+            <option value="CHF">CHF</option>
+            <option value="CNY">CNY</option>
+        </select>
+        
+        <button id="convertBtn" class="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 focus:outline-none">
+            Convert
+        </button>
+    </div>
+</div>
+
+<div class="mt-8 max-w-md mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+    <div class="p-4">
+        <h2 class="text-xl font-bold mb-4">Transaction History</h2>
+        <ul id="transactionList" class="divide-y divide-gray-300">
+            <!-- Transaction items will be added dynamically here -->
+        </ul>
+    </div>
+</div>
+
+<!-- Link to external JavaScript file -->
+<script src="index.js"></script>
+</body>
+</html>
+
+
